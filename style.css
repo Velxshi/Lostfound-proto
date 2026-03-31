@@ -1,0 +1,72 @@
+body {
+  position: relative;
+  background-color: #fefefe;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('images/loginImage.png');
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 125px;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin-bottom: 20px;
+  line-height: 120%;
+}
+
+.login-card {
+  display: flex;
+  background-color: #fefefe;
+  width: 320px;
+  height: 240px;
+  padding: 52px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.google-btn {
+  display: flex;
+  width: 177px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fefefe;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: #dedbd8;
+}
+
+.google-btn img {
+  width: 24px;
+  height: 24px;
+}
