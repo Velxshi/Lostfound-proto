@@ -70,3 +70,73 @@ body::before {
   width: 24px;
   height: 24px;
 }
+
+@media (min-width: 768px) {
+  .logo {
+    width: 180px;
+  }
+
+  .login-container .title {
+    font-size: 49px;
+  }
+
+  .login-card {
+    width: 473px;
+    height: 240px;
+  }
+
+  .login-card h5 {
+    font-size: 31px;
+  }
+
+  .login-card .google-btn {
+    width: 220px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .google-btn img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 70px;
+    margin-bottom: 0;
+  }
+
+  .title {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    margin: 0;
+  }
+
+  .login-card {
+    width: 597px;
+    height: 263px;
+  }
+
+  .login-card h5 {
+    font-size: 35px;
+  }
+
+  .login-card .google-btn {
+    width: 436px;
+    font-size: 18px;
+  }
+
+  .google-btn img {
+    width: 32px;
+    height: 32px;
+  }
+}
