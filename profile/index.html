@@ -1,24 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../styles/global.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
     <div class="header-atas">
-        <div class="container-header">
-            <div class="profile-container">
-                <h1 class="text-profile text-h4 font-poppins text-cream ">Profile</h1>
+      <div class="container-header">
+        <div class="profile-container">
+          <h1 class="text-profile text-h4 font-poppins text-cream">Profile</h1>
+        </div>
+        <div class="image-header">
+          <img
+            class="logo-lost"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg/500px-Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="profile-atas">
+        <div class="profile-list">
+          <div class="profile-pic">
+            <img
+              class="logo-profile"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg/500px-Logo_of_Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg.png"
+              alt=""
+            />
+          </div>
+          <div class="nama-email">
+            <div>
+              <p class="font-poppins text-title2 font-bold nama">
+                Cristiano Ronaldo
+              </p>
             </div>
             <div>
-                <img src="" alt="">
+              <p class="text-body font-poppins">Johndoe@gmail.com</p>
             </div>
+          </div>
         </div>
-        
-        
+      </div>
+
+      <div class="body-bawah">
+  <div class="menu-item">
+    <div class="left">
+      <div class="bg-icon">
+        <i data-feather="user" class="icon-menu text-primary"></i>
+      </div>
+      <div class="text">
+        <p class="title font-poppins text-body">Akun Saya</p>
+        <p class="subtitle font-poppins text-caption">Buat perubahan di akunmu</p>
+      </div>
     </div>
-</body>
+    <i data-feather="chevron-right" class="chevron"></i>
+  </div>
+
+  <div class="menu-item">
+    <div class="left">
+      <div class="bg-icon">
+        <i data-feather="heart" class="icon-menu text-primary"></i>
+      </div>
+      <div class="text">
+        <p class="title font-poppins text-body">Mengenai Website Kami</p>
+      </div>
+    </div>
+    <i data-feather="chevron-right" class="chevron"></i>
+  </div>
+
+  <div class="menu-item">
+    <div class="left">
+      <div class="bg-icon">
+        <i data-feather="log-out" class="icon-menu text-primary"></i>
+      </div>
+      <div class="text">
+        <p class="title font-poppins text-body">Keluar</p>
+        <p class="subtitle font-poppins text-caption">Keluar dari akun</p>
+      </div>
+    </div>
+    <i data-feather="chevron-right" class="chevron"></i>
+  </div>
+</div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
