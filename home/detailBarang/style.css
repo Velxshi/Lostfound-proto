@@ -160,7 +160,38 @@ button:active{
     top: 24px;
     left: 24px;
     z-index: 20; 
-    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 200px;
+}
+
+@media (min-width: 768px) {
+    .detailbarang{
+        padding: 0 36px;
+    }
+    .gambarbarang{
+        width: 100%;
+        height: 744px;
+        background: url('../../assets/logo/macbook.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .bglost{
+        width: 76px;
+        height: 40px;
+    }
+
+    .lost-text{
+        font-size:1.25rem;
+    }
+    .found p{
+        font-size: 1rem;
+    }
+    .akun p{
+        font-size: 0.8125rem;
+    }
+  
 }
 
