@@ -1,0 +1,166 @@
+body{
+    background-color: #F7F3F0;
+}
+
+.detailbarang{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.gambarbarang{
+    width: 100%;
+    height: 402px;
+    background: url('../../assets/logo/macbook.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.namabarang{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px; 
+}
+
+.bglost{
+    width: 50px ;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #FF6467;
+
+}
+.lost-text{
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #1E1E1E;
+    
+}
+
+.judul-barang{
+    font-size: 1.9375rem;
+    font-weight: 700;
+}
+
+.found{
+    padding-top: 7px ;
+}
+
+
+.found p{
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #949290;
+}
+
+.kategori{
+    padding-top: 8px ;
+    display: flex;
+    
+    flex-direction: row;
+    gap: 8px;
+}
+
+.kategori p{
+font-size: 0.625rem;
+font-weight: 700;
+color: #1E1E1E;
+
+}
+
+.kategoribg{
+    width: 73px;
+    height: 28px;
+    background: #EAEDF8;
+    padding: 8px 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.kategoritext{
+padding: 8px 4px;
+text-align: center;
+}
+
+.kategoritext p{
+    font-size: 0.625rem;
+    font-weight: 400;
+    color: #949290;
+}
+
+.akun{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    padding-top: 10px;
+}
+
+.akun p{
+    font-size: 0.685rem;
+    font-weight: 400;
+    color: #949290;
+    padding-bottom: 5px;
+}
+
+.deskripsi{
+    padding-top: 10px;
+    font-size: 0.625rem;
+    font-weight: 400;
+    text-align: justify;
+    color: #1E1E1E;
+}
+
+.button{
+    display: flex;
+    width: 100%;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    padding-top:24px ;
+}
+
+button{
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    background: #2848B7;
+    color: #EAEDF8;
+    border: none;
+    /* margin: auto; */
+}
+
+button p{
+    font-size:1rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #182B6E;
+}
+
+button:active{
+    cursor: pointer;
+    background: #BCC6E9;
+}
+
+.container-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FEFEFE;
+    position: absolute; 
+    top: 24px;
+    left: 24px;
+    z-index: 20; 
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 200px;
+}
+
