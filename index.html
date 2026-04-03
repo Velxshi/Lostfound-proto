@@ -10,16 +10,30 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- SPlash screen -->
+    <div class="splash" id="splash">
+      <div class="splash-content">
+        <img src="assets/logo/logoLogin.png" class="splash-logo" id="logo" />
+        <h1 class="splash-title font-poppins text-primary" id="title">
+          Lost n Found
+        </h1>
+      </div>
+    </div>
+
     <div class="login-container">
       <img src="assets/logo/logoLogin.png" class="logo" />
       <h4 class="title text-h4 font-poppins text-primary">Lost n Found</h4>
       <div class="login-card">
         <h5 class="text-h5 font-poppins">Selamat Datang</h5>
-        <button class="google-btn font-jakarta text-body">
-          <img src="assets/icons/google.png" />
-          Login by Google
-        </button>
+        <form action="home/index.html">
+          <button class="google-btn font-jakarta text-body">
+            <img src="assets/icons/google.png" />
+            Login by Google
+          </button>
+        </form>
       </div>
     </div>
+
+    <script src="scripts/core.js"></script>
   </body>
 </html>
