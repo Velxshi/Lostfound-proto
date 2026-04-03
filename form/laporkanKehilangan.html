@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporkan Barang Hilang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/global.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                <path d="M6.19487 10.2917L10.6282 14.7251L9.50008 15.8334L3.16675 9.50008L9.50008 3.16675L10.6282 4.27508L6.19487 8.70842H15.8334V10.2917H6.19487Z" fill="black"/>
+            </svg>
+        </div>
+        <div class="title">
+            <h3 class="font-poppins">Laporkan Barang Hilang</h3>
+        </div>
+    </div>
+    <div class="container">
+        <form action="" method="">
+            <div class="form-group">
+                <label class="form-label">Nama Barang</label>
+                <div class="input-text">
+                    <input type="text" placeholder="Contoh: MacBook Air M2 " required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Pilih Kategori</label>
+                <div class="input-icon" id="openModal" style="cursor: pointer;">
+                    <input type="text" id="categoryInput" placeholder="Pilih Kategori" readonly>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 8L12 17L18 8" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Lokasi Terakhir</label>
+                <div class="input-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 20" fill="none">
+                        <path d="M7 0.5C8.72391 0.5 10.3777 1.18433 11.5967 2.40332C12.8157 3.62231 13.5 5.27609 13.5 7C13.5 8.21133 13.0936 9.6058 12.4502 11.042C11.8097 12.4716 10.9515 13.9066 10.0859 15.1895C9.22135 16.4709 8.35488 17.591 7.70508 18.3916C7.42337 18.7387 7.18198 19.0246 7 19.2373C6.81802 19.0246 6.57663 18.7387 6.29492 18.3916C5.64512 17.591 4.77865 16.4709 3.91406 15.1895C3.04854 13.9066 2.19028 12.4716 1.5498 11.042C0.906389 9.6058 0.5 8.21133 0.5 7C0.5 5.27609 1.18433 3.62231 2.40332 2.40332C3.62231 1.18433 5.27609 0.5 7 0.5ZM7 4C6.20435 4 5.44152 4.3163 4.87891 4.87891C4.3163 5.44152 4 6.20435 4 7C4 7.79565 4.3163 8.55848 4.87891 9.12109C5.44152 9.6837 6.20435 10 7 10C7.39397 10 7.78446 9.92225 8.14844 9.77148C8.51226 9.62072 8.84262 9.39957 9.12109 9.12109C9.39957 8.84262 9.62072 8.51226 9.77148 8.14844C9.92225 7.78446 10 7.39397 10 7C10 6.20435 9.6837 5.44152 9.12109 4.87891C8.55848 4.3163 7.79565 4 7 4Z" stroke="#7C7C7C"/>
+                    </svg>
+                    <input type="text" placeholder="contoh. Gedung Baru Lantai 3 " required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Tanggal Hilang</label>
+                <div class="input-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 6H5C3.89543 6 3 6.89543 3 8V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V8C21 6.89543 20.1046 6 19 6Z" stroke="#7C7C7C"/>
+                        <path d="M3 10C3 8.114 3 7.172 3.586 6.586C4.172 6 5.114 6 7 6H17C18.886 6 19.828 6 20.414 6.586C21 7.172 21 8.114 21 10H3Z" fill="#7C7C7C"/>
+                        <path d="M7 3V6M17 3V6" stroke="#7C7C7C" stroke-linecap="round"/>
+                    </svg>
+                    <input type="date" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Catatan</label>
+                <div class="input-textarea">
+                    <textarea placeholder="Tambahkan catatan yang ingin Anda berikan."></textarea>
+                </div>
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn-kirim">Laporkan</button>
+                <button type="button" class="btn-batal">Batalkan</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-overlay" id="modalCategory">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-handle"></div>
+                <span class="title-category">Pilih Kategori</span>
+                <p class="desc-category">Jenis barang apa yang anda temukan?</p>
+            </div>
+            <div class="category-list">
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Elektronik">
+                    <span class="item-text">Elektronik</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Dompet">
+                    <span class="item-text">Dompet</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Tas">
+                    <span class="item-text">Tas</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Kunci">
+                    <span class="item-text">Kunci</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Kartu Identitas">
+                    <span class="item-text">Kartu Identitas</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Buku">
+                    <span class="item-text">Buku</span>
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="category-item">
+                    <input type="radio" name="kategori" value="Lainnya">
+                    <span class="item-text">Lainnya</span>
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-kirim" id="confirmCategory" style="margin-top: 20px;">Konfirmasi Pilihan</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const openModal = document.getElementById('openModal');
+        const modal = document.getElementById('modalCategory');
+        const confirmBtn = document.getElementById('confirmCategory');
+        const categoryInput = document.getElementById('categoryInput');
+
+        // Klik input -> Modal Muncul
+        openModal.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        // Klik di luar modal -> Modal Tutup
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) modal.classList.remove('active');
+        });
+
+        // Klik Konfirmasi -> Update Nilai Input & Tutup
+        confirmBtn.addEventListener('click', () => {
+            const selected = document.querySelector('input[name="kategori"]:checked');
+            if(selected) {
+                categoryInput.value = selected.value;
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
