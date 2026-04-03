@@ -1,0 +1,222 @@
+body {
+  position: relative;
+  background-color: #fefefe;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('assets/background/loginImage.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 125px;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin-bottom: 20px;
+  line-height: 120%;
+}
+
+.login-card {
+  display: flex;
+  background-color: #fefefe;
+  width: 320px;
+  height: 240px;
+  padding: 52px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.google-btn {
+  display: flex;
+  width: 177px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fefefe;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: #dedbd8;
+}
+
+.google-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* splash screen */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #f7f3f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-logo {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.splash-title {
+  color: #fff;
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Animasi */
+.show-logo {
+  animation: fadeScale 0.8s forwards;
+}
+
+.show-text {
+  animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Splash keluar */
+.splash.hide {
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .logo {
+    width: 180px;
+  }
+
+  .login-container .title {
+    font-size: 49px;
+  }
+
+  .login-card {
+    width: 473px;
+    height: 240px;
+  }
+
+  .login-card h5 {
+    font-size: 31px;
+  }
+
+  .login-card .google-btn {
+    width: 220px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .google-btn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .splash-logo {
+    width: 120px;
+  }
+
+  .splash-title {
+    font-size: 32px;
+  }
+}
+
+/* Dekstop */
+@media (min-width: 1024px) {
+  .login-container {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 70px;
+  }
+
+  .title {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .login-card {
+    width: 597px;
+    height: 263px;
+  }
+
+  .login-card h5 {
+    font-size: 35px;
+  }
+
+  .login-card .google-btn {
+    width: 436px;
+    font-size: 18px;
+  }
+
+  .google-btn img {
+    width: 32px;
+    height: 32px;
+  }
+  .splash-logo {
+    width: 140px;
+  }
+
+  .splash-title {
+    font-size: 40px;
+  }
+}
