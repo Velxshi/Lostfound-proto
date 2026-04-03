@@ -1,3 +1,4 @@
+/* header */
 .header {
   width: 100%;
   height: fit-content;
@@ -39,6 +40,41 @@
   line-height: 1.4;
 }
 
+/* search */
+.searchBarDesktop {
+  display: none;
+}
+
+.searchBarMore {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--cream-light);
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+}
+
+.searchBarMore input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--cream-dark);
+  font-family: var(--font-poppins);
+  font-size: var(--text-body);
+  line-height: 1.4;
+}
+
+.searchBarMore input::placeholder {
+  color: var(--cream-dark);
+  font-family: var(--font-poppins);
+  font-size: var(--text-body);
+  line-height: 1.4;
+}
+
 .search {
   width: 100%;
   display: flex;
@@ -69,18 +105,36 @@
   line-height: 1.4;
 }
 
-.navbar {
+/* navbar */
+.wrapContent {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.wrapContent .navbar {
   width: 100%;
   height: fit-content;
   padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px solid #f3f4f6;
   background-color: var(--cream-light-hover);
   backdrop-filter: blur(12px);
   position: fixed;
   bottom: 0;
+  z-index: 2;
+}
+
+.wrapContent .navbar .logoNavbar {
+  display: none;
+}
+
+.wrapContent .navbar .navIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar .icon {
@@ -103,6 +157,8 @@
   font-weight: 800;
 }
 
+/* main content */
+
 main {
   width: 100%;
   height: fit-content;
@@ -119,12 +175,11 @@ main {
   display: flex;
   gap: 16px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .laporkan .cardLaporkan {
   width: 100%;
-  height: fit-content;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -191,13 +246,12 @@ main {
   height: fit-content;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
 }
 
 .statistik .cardStatistik {
   width: 100%;
-  height: fit-content;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -241,6 +295,7 @@ main {
   line-height: 1.4;
 }
 
+/* konten utama, list barang */
 .content {
   width: 100%;
   height: fit-content;
@@ -283,7 +338,7 @@ main {
   display: grid;
   width: 100%;
   height: fit-content;
-  grid-template-rows: repeat(2, fit-content(100%));
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
@@ -382,6 +437,99 @@ main {
   line-height: 1.4;
 }
 
+/* filter di more.html */
+.filter {
+  width: 100%;
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  z-index: 2;
+  font-family: var(--font-poppins);
+  font-size: var(--text-body);
+  line-height: 1.4;
+  color: var(--charcoal);
+}
+
+.filter .urutkan,
+.filter .kategori {
+  position: relative;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--charcoal);
+  background-color: var(--cream);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter .urutkan .button,
+.filter .kategori .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter .urutkan .button svg,
+.filter .kategori .button svg {
+  transition: all 0.3s ease-in-out;
+}
+
+.filter .urutkan.active svg,
+.filter .kategori.active svg {
+  transform: rotate(180deg);
+}
+
+.filter .urutkan .filterMenu,
+.filter .kategori .filterMenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  border-radius: 4px;
+  top: 112%;
+  left: 0;
+  border: 1px solid var(--charcoal);
+  background-color: var(--cream);
+  transition: all 0.3s ease-in-out;
+}
+
+.urutkan.active .filterMenu,
+.kategori.active .filterMenu {
+  display: block;
+}
+
+.filter .urutkan .filterMenu .item,
+.filter .kategori .filterMenu .item {
+  padding: 12px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.filter .urutkan .filterMenu .item:first-child,
+.filter .kategori .filterMenu .item:first-child {
+  border-top-left-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter .urutkan .filterMenu .item:last-child,
+.filter .kategori .filterMenu .item:last-child {
+  border-bottom-left-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter .urutkan .filterMenu .item:hover,
+.filter .kategori .filterMenu .item:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+  border-left: 4px solid var(--royale);
+}
+
+.item.selected {
+  border-left: 4px solid var(--royale);
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .header {
     border-radius: 0 0 32px 32px;
@@ -397,14 +545,19 @@ main {
     line-height: 1.5;
   }
 
-  .navbar {
+  .wrapContent .navbar {
     padding: 20px 36px;
   }
 
-  .navbar .icon p {
+  .wrapContent.navbar .navIcon .icon p {
     font-size: var(--text-title1);
     line-height: 1.5;
   }
+  .wrapContent .navbar .navIcon .icon svg {
+    height: 28px;
+    width: auto;
+  }
+
   main {
     padding: 24px 36px;
   }
@@ -430,7 +583,6 @@ main {
   }
 
   .content .items {
-    grid-template-rows: repeat(3, fit-content(100%));
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -457,5 +609,98 @@ main {
   .content .items .card .textSection .postTime p {
     font-size: var(--text-body);
     line-height: 1.4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+
+  .searchBarDesktop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--cream-light);
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+  }
+
+  .searchBarDesktop input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--cream-dark);
+    font-family: var(--font-poppins);
+    font-size: var(--text-body);
+    line-height: 1.4;
+  }
+
+  .searchBarDesktop input::placeholder {
+    color: var(--cream-dark);
+    font-family: var(--font-poppins);
+    font-size: var(--text-body);
+    line-height: 1.4;
+  }
+
+  .wrapContent {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    position: relative;
+    height: 100%;
+  }
+
+  .wrapContent .navbar {
+    width: 25%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 36px;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: flex-start;
+  }
+
+  .wrapContent .navbar .logoNavbar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .wrapContent .navbar .logoNavbar img {
+    width: 20%;
+  }
+  .wrapContent .navbar .logoNavbar h1 {
+    color: var(--royale);
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: var(--text-title1);
+    line-height: 1.2;
+  }
+
+  .wrapContent .navbar .navIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .wrapContent .navbar .navIcon .icon {
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .wrapContent .navbar .icon p {
+    font-size: var(--text-title1);
+    line-height: 1.4;
+  }
+  .content .items {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
