@@ -25,19 +25,19 @@
   flex-direction: column;
 }
 
-.header .title .textSection h3 {
+.header .title .textSection h4 {
   color: var(--royale-light);
   font-family: var(--font-poppins);
   font-weight: 700;
   font-size: var(--text-h4);
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .header .title .textSection p {
   color: var(--cream-dark);
   font-family: var(--font-jakarta);
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 /* search */
@@ -45,36 +45,7 @@
   display: none;
 }
 
-.searchBarMore {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  padding: 16px;
-  background-color: var(--cream-light);
-  border-radius: 16px;
-  backdrop-filter: blur(2px);
-}
-
-.searchBarMore input {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: var(--cream-dark);
-  font-family: var(--font-poppins);
-  font-size: var(--text-body);
-  line-height: 1.4;
-}
-
-.searchBarMore input::placeholder {
-  color: var(--cream-dark);
-  font-family: var(--font-poppins);
-  font-size: var(--text-body);
-  line-height: 1.4;
-}
-
+.searchBarMore,
 .search {
   width: 100%;
   display: flex;
@@ -82,27 +53,50 @@
   align-items: center;
   gap: 8px;
   padding: 16px;
-  background-color: rgba(247, 243, 240, 0.1);
   border-radius: 16px;
   backdrop-filter: blur(2px);
 }
 
+.search {
+  background-color: rgba(247, 243, 240, 0.1);
+}
+
+.searchBarMore {
+  background-color: var(--cream-light);
+}
+
+.searchBarMore input,
 .search input {
   width: 100%;
   background-color: transparent;
   border: none;
   outline: none;
-  color: var(--cream);
   font-family: var(--font-poppins);
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.2;
+}
+
+.search input {
+  color: var(--cream);
+}
+
+.searchBarMore input {
+  color: var(--cream-dark);
+}
+
+.searchBarMore input::placeholder,
+.search input::placeholder {
+  font-family: var(--font-poppins);
+  font-size: var(--text-body);
+  line-height: 1.2;
+}
+
+.searchBarMore input::placeholder {
+  color: var(--cream-dark);
 }
 
 .search input::placeholder {
   color: rgba(247, 243, 240, 0.5);
-  font-family: var(--font-poppins);
-  font-size: var(--text-body);
-  line-height: 1.4;
 }
 
 /* navbar */
@@ -137,7 +131,7 @@
   align-items: center;
 }
 
-.navbar .icon {
+.navbar .navIcon .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,11 +139,11 @@
   cursor: pointer;
 }
 
-.navbar .icon p {
+.navbar .navIcon .icon p {
   color: var(--cream-dark);
   font-family: var(--font-jakarta);
   font-size: var(--text-caption);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .navbar .icon .active {
@@ -169,18 +163,20 @@ main {
   gap: 24px;
 }
 
-.laporkan {
+.laporkan,
+.statistik {
   width: 100%;
   height: fit-content;
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
 }
 
-.laporkan .cardLaporkan {
+.laporkan .cardLaporkan,
+.statistik .cardStatistik,
+.content .items .card {
   width: 100%;
-  padding: 20px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -195,19 +191,34 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
+.laporkan .cardLaporkan {
+  padding: 20px;
+  gap: 24px;
+}
+
+.statistik .cardStatistik {
+  padding: 16px;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content .items .card {
+  position: relative;
+  padding-bottom: 12px;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px 0 rgba(30, 30, 30, 0.25);
+}
+
 .laporkan .cardLaporkan:hover {
   transform: scale(1.05);
 }
 
-.laporkan .cardLaporkan .firstIcon {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  background: #fef2f2;
-}
+.laporkan .cardLaporkan .firstIcon,
 .laporkan .cardLaporkan .secondIcon {
   display: flex;
   width: 40px;
@@ -215,7 +226,13 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: #f0fdf4;
+}
+
+.laporkan .cardLaporkan .firstIcon {
+  background-color: #fef2f2;
+}
+.laporkan .cardLaporkan .secondIcon {
+  background-color: #f0fdf4;
 }
 
 .laporkan .cardLaporkan .textSection {
@@ -230,7 +247,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 700;
   font-size: var(--text-body);
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .laporkan .cardLaporkan .textSection p {
@@ -238,35 +255,7 @@ main {
   font-family: var(--font-jakarta);
   font-weight: 600;
   font-size: var(--text-caption);
-  line-height: 1.4;
-}
-
-.statistik {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 12px;
-}
-
-.statistik .cardStatistik {
-  width: 100%;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex: 1 0 0;
-  gap: 8px;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  border: 1px solid #f3f4f6;
-  cursor: pointer;
-  background-color: var(--cream-light);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+  line-height: 1.2;
 }
 
 .statistik .cardStatistik:hover {
@@ -284,7 +273,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 700;
   font-size: var(--text-title2);
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .statistik .cardStatistik .textSection p {
@@ -292,7 +281,7 @@ main {
   font-family: var(--font-jakarta);
   font-weight: 600;
   font-size: var(--text-caption);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 /* konten utama, list barang */
@@ -316,7 +305,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 700;
   font-size: var(--text-title1);
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .content .title a {
@@ -324,7 +313,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 600;
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.2;
   text-decoration: underline;
   transition: all 0.3s ease-in-out;
 }
@@ -338,29 +327,9 @@ main {
   display: grid;
   width: 100%;
   height: fit-content;
-
+  /* align-items: stretch; */
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-}
-
-.content .items .card {
-  position: relative;
-
-  width: 100%;
-  height: fit-content;
-  padding-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex: 1 0 0;
-  border-radius: 12px;
-  border: 1px solid #f3f4f6;
-  cursor: pointer;
-  background-color: var(--cream-light);
-  box-shadow: 0 4px 4px 0 rgba(30, 30, 30, 0.25);
-  transition: all 0.3s ease-in-out;
 }
 
 .content .items .card:hover {
@@ -378,7 +347,7 @@ main {
   font-weight: 700;
   font-size: var(--text-caption);
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .content .items .card .status.lost {
@@ -411,7 +380,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 700;
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .content .items .card .textSection .location,
@@ -426,7 +395,7 @@ main {
   font-family: var(--font-poppins);
   font-weight: 600;
   font-size: var(--text-caption);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .content .items .card .textSection .postTime p {
@@ -434,7 +403,7 @@ main {
   font-family: var(--font-jakarta);
   font-weight: 500;
   font-size: var(--text-caption);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 /* filter di more.html */
@@ -449,7 +418,7 @@ main {
   z-index: 2;
   font-family: var(--font-poppins);
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.2;
   color: var(--charcoal);
 }
 
@@ -508,14 +477,10 @@ main {
   transition: all 0.3s ease-in-out;
 }
 .filter .urutkan .filterMenu .item:first-child,
-.filter .kategori .filterMenu .item:first-child {
-  border-top-left-radius: 4px;
-  transition: all 0.3s ease-in-out;
-}
-
+.filter .kategori .filterMenu .item:first-child,
 .filter .urutkan .filterMenu .item:last-child,
 .filter .kategori .filterMenu .item:last-child {
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -540,19 +505,10 @@ main {
     line-height: 1.2;
   }
 
-  .header .title .textSection p {
-    font-size: var(--text-title1);
-    line-height: 1.5;
-  }
-
   .wrapContent .navbar {
     padding: 20px 36px;
   }
 
-  .wrapContent.navbar .navIcon .icon p {
-    font-size: var(--text-title1);
-    line-height: 1.5;
-  }
   .wrapContent .navbar .navIcon .icon svg {
     height: 28px;
     width: auto;
@@ -562,24 +518,12 @@ main {
     padding: 24px 36px;
   }
 
-  .laporkan .cardLaporkan .textSection h4 {
+  .laporkan .cardLaporkan .textSection h4,
+  .statistik .cardStatistik .textSection h4,
+  .wrapContent.navbar .navIcon .icon p,
+  .header .title .textSection p {
     font-size: var(--text-title1);
-    line-height: 1.5;
-  }
-
-  .laporkan .cardLaporkan .textSection p {
-    font-size: var(--text-body);
-    line-height: 1.4;
-  }
-
-  .statistik .cardStatistik .textSection h4 {
-    font-size: var(--text-title1);
-    line-height: 1.5;
-  }
-
-  .statistik .cardStatistik .textSection p {
-    font-size: var(--text-body);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   .content .items {
@@ -588,27 +532,21 @@ main {
 
   .content .title h3 {
     font-size: var(--text-h5);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
-  .content .title a {
-    font-size: var(--text-title2);
-    line-height: 1.5;
-  }
-
+  .content .title a,
   .content .items .card .textSection h4 {
     font-size: var(--text-title2);
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
-  .content .items .card .textSection .location p {
+  .content .items .card .textSection .location p,
+  .content .items .card .textSection .postTime p,
+  .statistik .cardStatistik .textSection p,
+  .laporkan .cardLaporkan .textSection p {
     font-size: var(--text-body);
-    line-height: 1.4;
-  }
-
-  .content .items .card .textSection .postTime p {
-    font-size: var(--text-body);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 }
 
@@ -637,14 +575,14 @@ main {
     color: var(--cream-dark);
     font-family: var(--font-poppins);
     font-size: var(--text-body);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   .searchBarDesktop input::placeholder {
     color: var(--cream-dark);
     font-family: var(--font-poppins);
     font-size: var(--text-body);
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   .wrapContent {
@@ -698,7 +636,7 @@ main {
 
   .wrapContent .navbar .icon p {
     font-size: var(--text-title1);
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .content .items {
     grid-template-columns: repeat(4, minmax(0, 1fr));
