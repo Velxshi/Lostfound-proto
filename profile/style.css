@@ -1,109 +1,108 @@
-body{
-    background: #F7F3F0;
+body {
+  background: #f7f3f0;
 }
 
-
-.header-atas{
-background: linear-gradient(180deg, #2848B7 0%, #3158E0 100%);
-border-radius: 0 0 32px 32px;
-width: 100%;
-height: 170px;
-width:auto;
-display: flex;
-padding: 56px 24px;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
+.header-atas {
+  background: linear-gradient(180deg, #2848b7 0%, #3158e0 100%);
+  border-radius: 0 0 32px 32px;
+  width: 100%;
+  height: 170px;
+  width: auto;
+  display: flex;
+  padding: 56px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
-.container-header{
-display: flex;
-width: 100%;
-height: 58px;
-justify-content: space-between;
-align-items: flex-start;
+.container-header {
+  display: flex;
+  width: 100%;
+  height: 58px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.profile-container{
-display: flex;
-height: 20px;
-flex-direction: column;
-align-items: flex-start;
-align-self: stretch;
+.profile-container {
+  display: flex;
+  height: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
 }
-.text-profile{
-font-style: normal;
-font-weight: 700;
-line-height: 120%; 
-    
+.text-profile {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
 }
 
-.logo-lost{
-width: 48.85px;
-height: 45px;
+.logo-lost {
+  width: 48.85px;
+  height: 45px;
 }
 
-.profile-atas{
-display: flex;
-width: calc(100% - 48px);
-height: 76px;
-padding: 24px 24px;
-align-items: center;
-gap: 12px;
-border-radius: 20px;
-background: #FFF;
-margin: 24px;
+.profile-atas {
+  display: flex;
+  width: calc(100% - 48px);
+  height: 76px;
+  padding: 24px 24px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background: #fff;
+  margin: 24px;
 }
 
-.profile-list{
-display: flex;
-flex-direction: row;
-width: 354px;
-height: 76px;
-padding: 10px 5px;
-gap: 10px;
+.profile-list {
+  display: flex;
+  flex-direction: row;
+  width: 354px;
+  height: 76px;
+  padding: 10px 5px;
+  gap: 10px;
 }
-.profile-pic{
-display: flex;
-margin-top: auto;
-margin-bottom: auto;
-}
-
-.nama-email{
+.profile-pic {
+  display: flex;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.logo-profile{
-width: auto;
-height: 45px;
+.nama-email {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.body{
+.logo-profile {
+  width: auto;
+  height: 45px;
+}
+
+.body {
   width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .body-bawah {
-background: #fff;
-width: calc(100% - 48px);
-padding: 20px 16px;
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-gap: 24px;
+  background: #fff;
+  width: calc(100% - 48px);
+  padding: 20px 16px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .menu-item {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .left {
-display: flex;
-align-items: center;
-gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .bg-icon {
@@ -111,16 +110,13 @@ gap: 12px;
   min-height: 40px;
   width: 40px;
   height: 40px;
-  background: #E5E5E5;
+  background: #e5e5e5;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-
-
-
 
 .icon-menu {
   width: 20px;
@@ -139,83 +135,77 @@ gap: 12px;
   width: 140px;
 }
 
-
-
-.akun{
-display: flex;
-flex-direction: row;
-width: auto;
-padding: 10px;
-justify-content: space-between;
-align-items: flex-start;
-gap: 16px;
+.akun {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-
-.chevron{
-    margin-top: 4px;
-    width: 18px;
-    height: 18px;
+.chevron {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
 }
 
-
-
-.profile-name{
-    font-size: 1rem;
-  }
-
-.profile-email{
-    font-size: 0.813rem;
+.profile-name {
+  font-size: 1rem;
 }
 
+.profile-email {
+  font-size: 0.813rem;
+}
 
-.primary-text{
-    font-size: 0.813rem;
-  }
+.primary-text {
+  font-size: 0.813rem;
+}
 
-.sub-text{
+.sub-text {
   font-size: 0.625rem;
 }
 @media (min-width: 768px) {
-.profile-atas{
+  .profile-atas {
     height: 116px;
   }
 
-  .logo-profile{
+  .logo-profile {
     width: auto;
     height: 92px;
     margin-top: -20px;
   }
 
-  .profile-name{
+  .profile-name {
     font-size: 1.563rem;
   }
 
-  .profile-email{
+  .profile-email {
     font-size: 1rem;
-}
-  .bg-icon{
+  }
+  .bg-icon {
     width: 60px;
     height: 60px;
   }
-  .logo-list{
+  .logo-list {
     width: 30px;
     height: 30px;
   }
 
-  .chevron{
+  .chevron {
     width: 20px;
     height: 20px;
   }
 
-  .primary-text{
+  .primary-text {
     font-size: 1rem;
   }
 
-  .sub-text{
-  font-size: 0.813rem;
-  width: auto;
-}
+  .sub-text {
+    font-size: 0.813rem;
+    width: auto;
+  }
   .wrapContent .navbar {
     padding: 20px 36px;
   }
@@ -225,8 +215,6 @@ gap: 16px;
     width: auto;
   }
 }
-
-
 
 .wrapContent {
   width: 100%;
@@ -279,12 +267,12 @@ gap: 16px;
   font-weight: 800;
 }
 
-main{
+main {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
-.wrapContent {
+  .wrapContent {
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -337,66 +325,61 @@ main{
     font-size: var(--text-title1);
     line-height: 1.2;
   }
-  header{
+  header {
     display: none;
   }
 
+  .profile-atas {
+    display: flex;
+    width: calc(100% - 48px);
+    height: 148px;
+    padding: 24px 24px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    background: #fff;
+    margin: 24px;
+  }
 
-  .profile-atas{
-display: flex;
-width: calc(100% - 48px);
-height: 148px;
-padding: 24px 24px;
-align-items: center;
-gap: 12px;
-border-radius: 20px;
-background: #FFF;
-margin: 24px;
-}
-
-  .logo-profile{
+  .logo-profile {
     width: 100px;
     height: 100px;
   }
 
-  .profile-name{
+  .profile-name {
     font-size: 2.4375rem;
   }
 
-  .profile-email{
+  .profile-email {
     font-size: 1.25rem;
-}
-.nama-email{
-  margin-top: -14px;
-}
-.profile-list{
-  gap: 16px;
-}
+  }
+  .nama-email {
+    margin-top: -14px;
+  }
+  .profile-list {
+    gap: 16px;
+  }
 
-.bg-icon{
+  .bg-icon {
     width: 70px;
     height: 70px;
   }
-  .logo-list{
+  .logo-list {
     width: 35px;
     height: 35px;
   }
 
-  .chevron{
+  .chevron {
     width: 30px;
     height: 30px;
   }
 
-  .primary-text{
+  .primary-text {
     font-size: 1.25rem;
   }
 
-  .sub-text{
-  font-size: 0.913rem;
-  width: auto;
+  .sub-text {
+    font-size: 0.913rem;
+    width: auto;
+  }
 }
-
-}
-
-
-

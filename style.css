@@ -4,10 +4,10 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
-  background-image: url('assets/background/loginImage.png');
+  background-image: url("assets/background/loginImage.png");
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.15;
@@ -141,7 +141,8 @@ body::before {
   }
 
   .login-container .title {
-    font-size: 49px;
+    font-size: var(--text-h2);
+    line-height: 1.2;
   }
 
   .login-card {
@@ -150,13 +151,15 @@ body::before {
   }
 
   .login-card h5 {
-    font-size: 31px;
+    font-size: var(--text-h4);
+    line-height: 1.2;
   }
 
   .login-card .google-btn {
     width: 220px;
     height: 52px;
-    font-size: 16px;
+    font-size: var(--text-title2);
+    line-height: 1.2;
   }
 
   .google-btn img {
@@ -169,7 +172,8 @@ body::before {
   }
 
   .splash-title {
-    font-size: 32px;
+    font-size: var(--text-h4);
+    line-height: 1.2;
   }
 }
 
@@ -177,21 +181,6 @@ body::before {
 @media (min-width: 1024px) {
   .login-container {
     position: relative;
-  }
-
-  .logo {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 70px;
-  }
-
-  .title {
-    position: absolute;
-    top: 40px;
-    left: 140px;
-    margin: 0;
-    font-size: 28px;
   }
 
   .login-card {
@@ -217,6 +206,7 @@ body::before {
   }
 
   .splash-title {
-    font-size: 40px;
+    font-size: var(--text-h3);
+    line-height: 1.2;
   }
 }

@@ -146,7 +146,7 @@
   line-height: 1.2;
 }
 
-.navbar .icon .active {
+.navbar .navIcon .icon .active {
   color: var(--royale);
   font-weight: 800;
 }
