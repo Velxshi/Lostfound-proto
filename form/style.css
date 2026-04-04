@@ -76,7 +76,7 @@ main {
     padding: 24px 20px;
     align-items: center;
     gap: 24px;
-    background: #FFF;
+    background: var(--cream-light-hover);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
@@ -167,6 +167,7 @@ main {
     width: 100%;
     font-size: 14px;
     background: transparent;
+    font-family: var(--font-poppins);
 }
 
 .input-text input::placeholder{
@@ -192,6 +193,7 @@ main {
     width: 100%;
     font-size: 14px;
     background: transparent;
+    font-family: var(--font-poppins);
 }
 
 .input-icon input::placeholder{
@@ -206,6 +208,7 @@ main {
     width: 100%;
     font-size: 14px;
     background: transparent;
+    font-family: var(--font-poppins);
 }
 
 .input-textarea{
@@ -223,6 +226,8 @@ main {
     outline: none;
     resize: none;
     font-size: 14px;
+    background: transparent;
+    font-family: var(--font-poppins);
 }
 
 .input-textarea textarea::placeholder{
@@ -408,10 +413,19 @@ main {
     .input-icon input[type="date"]{
         font-size: var(--text-title2);
     }
+    .input-text input {
+        font-size: var(--text-title2);
+    }
     .input-text input::placeholder{
         font-size: var(--text-title2);
     }
+    .input-icon input{
+        font-size: var(--text-title2);
+    }
     .input-icon input::placeholder{
+        font-size: var(--text-title2);
+    }
+    .input-textarea textarea{
         font-size: var(--text-title2);
     }
     .input-textarea textarea::placeholder{
@@ -451,6 +465,52 @@ main {
         top: 0;
         z-index: 11;
         box-shadow: 0 0 0 1px rgba(0,0,0,0);
+        padding: 24px 36px;
+    }
+
+    .icon-back {
+        display: none;
+    }
+
+    .card-label {
+        font-size: var(--text-title2);
+    }  
+
+    .card-title {
+        font-size: var(--text-title1);
+    }
+    .form-label {
+        font-size: var(--text-title1);
+    }
+
+    .btn-kirim {
+        font-size: var(--text-title1);
+        margin: 0;
+    }
+    .btn-batal {
+        font-size: var(--text-title1);
+    }
+
+    .input-icon input[type="date"]{
+        font-size: var(--text-title1);
+    }
+    .input-text input {
+        font-size: var(--text-title1);
+    }
+    .input-text input::placeholder{
+        font-size: var(--text-title1);
+    }
+    .input-icon input {
+        font-size: var(--text-title1);
+    }
+    .input-icon input::placeholder{
+        font-size: var(--text-title1);
+    }
+    .input-textarea textarea {
+        font-size: var(--text-title1);
+    }
+    .input-textarea textarea::placeholder{
+        font-size: var(--text-title1);
     }
 
     .modal-overlay {
