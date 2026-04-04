@@ -354,6 +354,10 @@ main {
     font-size: var(--text-title2);
 }
 
+.category-item:hover {
+    background: var(--royale-light-hover);
+}
+
 .category-item input { 
     display: none; 
 }
