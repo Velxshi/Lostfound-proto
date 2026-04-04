@@ -1,0 +1,353 @@
+body{
+    background-color: #F7F3F0;
+}
+
+.detailbarang{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.gambarbarang{
+    width: 100%;
+    height: 402px;
+
+}
+
+.gambarbarang img{
+    width: 100%;
+    height: 100%;
+}
+
+/* navbar */
+.wrapContent {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.wrapContent .navbar {
+  width: 100%;
+  height: fit-content;
+  padding: 16px 24px;
+  border-top: 1px solid #f3f4f6;
+  background-color: var(--cream-light-hover);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+}
+
+.wrapContent .navbar .logoNavbar {
+  display: none;
+}
+
+.wrapContent .navbar .navIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navIcon .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.navbar .navIcon .icon p {
+  color: var(--cream-dark);
+  font-family: var(--font-jakarta);
+  font-size: var(--text-caption);
+  line-height: 1.2;
+}
+
+.navbar .icon .active {
+  color: var(--royale);
+  font-weight: 800;
+}
+
+
+.namabarang{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px; 
+}
+
+.bglost{
+    width: 50px ;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #FF6467;
+
+}
+.lost-text{
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #1E1E1E;
+    
+}
+
+.judul-barang{
+    font-size: 1.9375rem;
+    font-weight: 700;
+}
+
+.found{
+    padding-top: 7px ;
+}
+
+
+.found p{
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #949290;
+}
+
+.kategori{
+    padding-top: 8px ;
+    display: flex;
+    
+    flex-direction: row;
+    gap: 8px;
+}
+
+.kategori p{
+font-size: 0.625rem;
+font-weight: 700;
+color: #1E1E1E;
+
+}
+
+.kategoribg{
+    width: 73px;
+    height: 28px;
+    background: #EAEDF8;
+    padding: 8px 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.kategoritext{
+padding: 8px 4px;
+text-align: center;
+}
+
+.kategoritext p{
+    font-size: 0.625rem;
+    font-weight: 400;
+    color: #949290;
+}
+
+.akun{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    padding-top: 10px;
+}
+
+.akun p{
+    font-size: 0.685rem;
+    font-weight: 400;
+    color: #949290;
+    padding-bottom: 5px;
+}
+
+.deskripsi{
+    padding-top: 10px;
+    font-size: 0.625rem;
+    font-weight: 400;
+    text-align: justify;
+    color: #1E1E1E;
+}
+
+.button{
+    display: flex;
+    width: 100%;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    padding-top:24px ;
+}
+
+button{
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    background: #2848B7;
+    color: #EAEDF8;
+    border: none;
+    /* margin: auto; */
+}
+
+button p{
+    font-size:1rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #182B6E;
+}
+
+button:active{
+    cursor: pointer;
+    background: #BCC6E9;
+}
+
+.container-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FEFEFE;
+    position: absolute; 
+    top: 24px;
+    left: 24px;
+    z-index: 20; 
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 200px;
+}
+
+@media (min-width: 768px) {
+    .detailbarang{
+        padding: 0 36px;
+    }
+    .gambarbarang{
+        width: 100%;
+        height: 744px;
+
+    }
+
+
+    .bglost{
+        width: 76px;
+        height: 40px;
+    }
+
+    .lost-text{
+        font-size:1.25rem;
+    }
+    .found p{
+        font-size: 1rem;
+    }
+    .akun p{
+        font-size: 0.8125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+ .wrapContent {
+    display: flex;
+    flex-direction: row;
+    /* gap: 24px; */
+    position: relative;
+    height: 100%;
+  }
+
+  .wrapContent .navbar {
+    width: 25%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 36px;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: flex-start;
+  }
+
+  .wrapContent .navbar .logoNavbar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .wrapContent .navbar .logoNavbar img {
+    width: 20%;
+  }
+  .wrapContent .navbar .logoNavbar h1 {
+    color: var(--royale);
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: var(--text-title1);
+    line-height: 1.2;
+  }
+
+  .wrapContent .navbar .navIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .wrapContent .navbar .navIcon .icon {
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .wrapContent .navbar .icon p {
+    font-size: var(--text-title1);
+    line-height: 1.2;
+  }
+
+  main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .gambarbarang{
+    margin-left: 24px;
+    width: 100%;
+    height: 350px; 
+    ;   
+  }
+
+  .gambarbarang img{
+    width: 100%;
+    min-width: 380px;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.namabarang{
+    padding-top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.bglost{
+    width: 52px;
+    height: 24px;
+}
+
+.lost-text{
+    font-size:0.875rem;
+
+}
+
+.found p{
+    font-size: 1rem;
+}
+
+.container-back{
+    display: none;
+}
+}
+
